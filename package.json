@@ -1,7 +1,7 @@
 {
   "name": "ng-countdown",
-  "version": "0.1.1",
-  "description": "Youtube video embeds for responsive layouts",
+  "version": "0.0.1",
+  "description": "Countdown or up",
   "main": "",
   "scripts": {
     "test": "karma start --single-run --no-auto-watch",
