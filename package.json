@@ -1,0 +1,34 @@
+{
+  "name": "ng-countdown",
+  "version": "0.1.1",
+  "description": "Youtube video embeds for responsive layouts",
+  "main": "",
+  "scripts": {
+    "test": "karma start --single-run --no-auto-watch",
+    "start": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/techjacker/ng-countdown.git"
+  },
+  "author": {
+    "name": "Andrew Griffiths",
+    "email": "mail@andrewgriffithsonline.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "karma": "~0.10",
+    "karma-jasmine": "*",
+    "karma-chrome-launcher": "*",
+    "karma-firefox-launcher": "*",
+    "karma-ng-html2js-preprocessor": "~0.1.0",
+    "serve": "~1.3.0",
+    "grunt-cli": "~0.1.9",
+    "grunt": "~0.4.1",
+    "load-grunt-tasks": "~0.2.0",
+    "grunt-bower-install": "~0.6.1"
+  },
+  "dependencies": {
+    "serve": "~1.3.0"
+  }
+}

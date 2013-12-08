@@ -1,0 +1,25 @@
+{
+  "name": "ng-countdown",
+  "version": "0.1.1",
+  "description": "Youtube video embeds for responsive layouts",
+  "main": "js/vidz.js",
+  "scripts": {
+    "test": "karma start --single-run --no-auto-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/techjacker/ng-countdown.git"
+  },
+  "author": {
+    "name": "Andrew Griffiths",
+    "email": "mail@andrewgriffithsonline.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "angular": "1.0.8",
+    "jquery-throttle-debounce": "*",
+    "angular-mocks": "~1.0.8"
+  },
+  "devDependencies": {}
+}
