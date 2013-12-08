@@ -1,0 +1,13 @@
+#holding-els-for-scroll-demo {
+  height:1500px;
+  outline:1px solid green;
+}
+
+.bigText {
+  font-size:100px;
+  text-align:center;
+}
+
+.visuallyhidden {
+  visibility:hidden;
+}

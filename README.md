@@ -2,6 +2,12 @@
 
 Youtube video embeds for responsive layouts.
 
+## Tests
+
+```Shell
+karma start --reporters growler
+```
+
 ## Usage
 
 ```JavaScript
@@ -11,8 +17,7 @@ angular.module('myApp', ['youtubeResponsive']);
 
 
 ```HTML
-<!-- add the id of the youtube video you want to embed -->
-<responsive-video video-slug='xCFEk6Y8TmM'></responsive-video>
+<counter start="0" end="63" suffix="" speed="20" suffix="%" scroll="450">
 ```
 
 
@@ -22,7 +27,7 @@ angular.module('myApp', ['youtubeResponsive']);
 $ bower install ng-countdown
 ```
 
-Or just include 'js/vidz.js' file in your html.
+Or just include 'js/main.js' file in your html.
 
 
 ## Demo

@@ -1,22 +1,33 @@
-<!doctype html>
-<html ng-app="app">
-  <head>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Countdown</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
 
-  </head>
-  <body>
+<body ng-app="app">
 
-    <responsive-video video-slug='xCFEk6Y8TmM'></responsive-video>
+    <div id="holding-els-for-scroll-demo">0</div>
+
+
+    <div class="bigText">
+      <counter start="0" end="63" speed="20" suffix="%" scroll="50%">
+    </div>
+
+
+    <div id="holding-els-for-scroll-demo">50</div>
 
 
     <!-- bower:js -->
     <script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
-    <script type="text/javascript" src="bower_components/jquery-throttle-debounce/jquery.ba-throttle-debounce.js"></script>
+    <script type="text/javascript" src="bower_components/jquery-waypoints/waypoints.js"></script>
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <!-- endbower -->
 
     <!-- lib files -->
-    <script src="js/vidz.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
 
   </body>
 </html>

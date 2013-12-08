@@ -1,1 +1,1 @@
-var app = angular.module('app', ['youtubeResponsive']);
+var app = angular.module('app', ['countdown']);

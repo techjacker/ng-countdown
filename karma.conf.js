@@ -9,8 +9,6 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       // libraries
-      'bower_components/jquery/jquery.js',
-      'bower_components/jquery-throttle-debounce/jquery.ba-throttle-debounce.js',
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
 
