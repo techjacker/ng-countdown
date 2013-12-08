@@ -1,6 +1,6 @@
 # ng-countdown
 
-Youtube video embeds for responsive layouts.
+Counter.
 
 ## Tests
 
@@ -12,7 +12,7 @@ karma start --reporters growler
 
 ```JavaScript
 //inject angular file upload directives and service.
-angular.module('myApp', ['youtubeResponsive']);
+angular.module('myApp', ['countdown']);
 ```
 
 
