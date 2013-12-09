@@ -1,6 +1,6 @@
 var app = angular.module('countdown', []);
 
-app.directive('counter', function($rootScope) {
+app.directive('counter', function($rootScope, $timeout) {
 
   var increment = function (el, number, end, speed, suffix) {
     el.text(++number + suffix);
@@ -18,23 +18,28 @@ app.directive('counter', function($rootScope) {
       start: '@',
       end: '@'
     },
-    // replace: true,
     transclude: true,
     link: function ($scope, $element, attrs) {
 
-      $element.waypoint(function(direction) {
-        $scope.$evalAsync(function() {
-          $scope.startAnimation = true;
-        });
-      }, {offset: $scope.scroll || 450, triggerOnce: true});
-      // }, {offset: '50%', triggerOnce: true});
-      // }, {offset: 'bottom-in-view', triggerOnce: true});
-
-      $scope.$watch('end', function (newValue) {
-        if ($scope.startAnimation === true && angular.isNumber(parseInt(newValue))) {
+      var validateFn = function (newValue) {
+        if ($scope.startAnimation === true && angular.isNumber(parseInt($scope.end)) && angular.isNumber(parseInt($scope.start))) {
           increment($element, parseInt($scope.start), parseInt($scope.end), parseInt($scope.speed) || 20, $scope.suffix || '');
         }
-      });
+      };
+
+      $timeout(function () {
+        $element.waypoint(function(direction) {
+          $scope.$evalAsync(function() {
+            $scope.startAnimation = true;
+          });
+        }, {offset: $scope.scroll || 450, triggerOnce: true});
+        // }, {offset: '50%', triggerOnce: true});
+        // }, {offset: 'bottom-in-view', triggerOnce: true});
+      }, 500);
+
+      $scope.$watch('start', validateFn);
+      $scope.$watch('end', validateFn);
+      $scope.$watch('startAnimation', validateFn);
 
     }
   };

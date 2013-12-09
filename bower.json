@@ -1,6 +1,6 @@
 {
   "name": "ng-countdown",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Count up or down",
   "main": "js/main.js",
   "scripts": {
