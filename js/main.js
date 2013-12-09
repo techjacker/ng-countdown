@@ -4,7 +4,6 @@ app.directive('counter', function($rootScope) {
 
   var increment = function (el, number, end, speed, suffix) {
     el.text(++number + suffix);
-    console.log("end", end);
     if (number < end) {
       window.setTimeout(increment, speed, el, number, end, speed, suffix);
     }
