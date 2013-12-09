@@ -4,6 +4,7 @@ app.directive('counter', function($rootScope) {
 
   var increment = function (el, number, end, speed, suffix) {
     el.text(++number + suffix);
+    console.log("end", end);
     if (number < end) {
       window.setTimeout(increment, speed, el, number, end, speed, suffix);
     }
@@ -18,7 +19,8 @@ app.directive('counter', function($rootScope) {
       start: '@',
       end: '@'
     },
-    replace: true,
+    // replace: true,
+    transclude: true,
     link: function ($scope, $element, attrs) {
 
       $element.waypoint(function(direction) {
@@ -29,15 +31,16 @@ app.directive('counter', function($rootScope) {
       // }, {offset: '50%', triggerOnce: true});
       // }, {offset: 'bottom-in-view', triggerOnce: true});
 
-      $scope.$watch('startAnimation', function (newValue) {
-        if (newValue === true) {
-          increment($element, $scope.start, $scope.end, $scope.speed || 20, $scope.suffix || '');
+      $scope.$watch('end', function (newValue) {
+        if ($scope.startAnimation === true && angular.isNumber(parseInt(newValue))) {
+          increment($element, parseInt($scope.start), parseInt($scope.end), parseInt($scope.speed) || 20, $scope.suffix || '');
         }
       });
+
     }
   };
 });
 
 angular.module('countdown').run(['$templateCache', function ($templateCache) {
-  $templateCache.put('tpl/main.html', '<div id="counter" ng-class="{\'visuallyhidden\': !startAnimation}"></div>');
+  $templateCache.put('tpl/main.html', '<span ng-transclude id="counter" ng-class="{\'visuallyhidden\': !startAnimation}"></span>');
 }]);
