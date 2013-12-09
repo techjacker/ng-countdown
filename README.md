@@ -1,6 +1,6 @@
 # ng-countdown
 
-Counter.
+Count up or down to a number.
 
 ## Tests
 
@@ -8,26 +8,33 @@ Counter.
 karma start --reporters growler
 ```
 
-## Usage
-
-```JavaScript
-//inject angular file upload directives and service.
-angular.module('myApp', ['countdown']);
-```
-
-
-```HTML
-<counter start="0" end="63" suffix="" speed="20" suffix="%" scroll="450">
-```
-
-
 ## Install
 
 ```Shell
 $ bower install ng-countdown
 ```
 
-Or just include 'js/main.js' file in your html.
+Include dependencies and main lib file:
+
+```HTML
+<script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="bower_components/jquery-waypoints/waypoints.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+```
+
+
+## Usage
+
+```JavaScript
+angular.module('myApp', ['countdown']);
+```
+
+```HTML
+<counter start="0" end="63" suffix="" speed="20" suffix="%" scroll="450">
+```
+
+
+
 
 
 ## Demo
