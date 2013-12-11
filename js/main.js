@@ -13,6 +13,7 @@ app.directive('counter', function($rootScope, $timeout) {
     templateUrl: 'tpl/main.html',
     restrict: 'EA',
     scope: {
+      scroll: '@',
       suffix: '@',
       speed: '@',
       start: '@',
